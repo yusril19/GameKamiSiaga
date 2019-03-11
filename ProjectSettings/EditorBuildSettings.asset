@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Presistent.unity
+    guid: 1231620e552c0a8428d5896638a9fd2b
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 28a1e3302950bbe4e985d4acc8917c9c
+  - enabled: 1
+    path: Assets/Scenes/Quiz.unity
+    guid: 53dea7b9d01c18c41a0483628b44cf51
+  - enabled: 1
+    path: Assets/Scenes/GameTas.unity
+    guid: 6c7c271878426384497b64b4fa6ba5f6
+  - enabled: 1
+    path: Assets/Scenes/Belajar.unity
+    guid: a8eadb4cce94e7c43b5135d92dc2eccc
+  - enabled: 1
+    path: Assets/Scenes/Content.unity
+    guid: a95ee54cc828d064aa2cd0028457e48a
+  - enabled: 1
+    path: Assets/Scenes/MenuBermain.unity
+    guid: ee53125e60914e846b098b2450a0def2
+  m_configObjects: {}
