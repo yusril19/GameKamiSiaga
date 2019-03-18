@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,12 +9,14 @@ public class GameControllerQuiz : MonoBehaviour
     public Text displayQuestionText;
     public Transform answerButtonParent;
     public Text displayScoreText;
+    public Text lastScore;
     public Text statusDisplay;
     public Text TimeDisplay;
     public SimpleObjectPool answerButtonObjectPool;
     public GameObject StatusDisplay;
     public GameObject QuestionPanelDisplay;
     public GameObject RoundOverPanelDisplay;
+    public GameObject StartDisplay;
 
     private DataController dataCon;
     private RoundData CurrentRoundData;
@@ -27,10 +29,48 @@ public class GameControllerQuiz : MonoBehaviour
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
     // Start is called before the first frame update
-    void Start()
+
+    public void gempaChoice()
     {
         dataCon = FindObjectOfType<DataController>();
-        CurrentRoundData = dataCon.getCurrentData();
+        CurrentRoundData = dataCon.getGempa();
+
+        StartDisplay.SetActive(false);
+
+        questionPool = CurrentRoundData.questions;
+        time = CurrentRoundData.timeLimitInSeconds; 
+        UpdateTime();
+
+        playerScore = 0;
+        questionIndex = 0;
+
+        showQuestion();
+        isRoundActive = true;
+    }
+    public void tsunamiChoice()
+    {
+        dataCon = FindObjectOfType<DataController>();
+        CurrentRoundData = dataCon.getGempa();
+
+        StartDisplay.SetActive(false);
+
+        questionPool = CurrentRoundData.questions;
+        time = CurrentRoundData.timeLimitInSeconds;
+        UpdateTime();
+
+        playerScore = 0;
+        questionIndex = 0;
+
+        showQuestion();
+        isRoundActive = true;
+    }
+    public void gunungApiChoice()
+    {
+        dataCon = FindObjectOfType<DataController>();
+        CurrentRoundData = dataCon.getGempa();
+
+        StartDisplay.SetActive(false);
+
         questionPool = CurrentRoundData.questions;
         time = CurrentRoundData.timeLimitInSeconds;
         UpdateTime();
@@ -71,7 +111,8 @@ public class GameControllerQuiz : MonoBehaviour
         if (isCorret)
         {
             playerScore += CurrentRoundData.plusScore;
-            displayScoreText.text = "Score :" + playerScore.ToString();
+            displayScoreText.text = "" + playerScore.ToString();
+            lastScore.text = "" + playerScore.ToString();
             StartCoroutine(ShowStatus("Benar", 0.5f));
         }
         else
@@ -87,7 +128,7 @@ public class GameControllerQuiz : MonoBehaviour
         {
             EndGame();
         }
-
+        
     }
     public void EndGame()
     {
@@ -113,7 +154,7 @@ public class GameControllerQuiz : MonoBehaviour
     }
     private void UpdateTime()
     {
-        TimeDisplay.text = "Waktu :" + Mathf.Round(time).ToString();
+        TimeDisplay.text = "" + Mathf.Round(time).ToString();
     }
     // Update is called once per frame
     void Update()

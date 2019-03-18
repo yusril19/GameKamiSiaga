@@ -156,48 +156,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allRoundData:
-  - name: Round Zero
-    timeLimitInSeconds: 30
+  - name: Gempa Bumi
+    timeLimitInSeconds: 60
     plusScore: 10
     questions:
-    - questionText: Bagaimana jika ada gempa ketika anda berada diruang kelas ?
+    - questionText: Apa itu gempa bumi ?
       answers:
-      - answerText: Berlindung dibawah meja
+      - answerText: Getaran atau gunvangan dipermukaan bumi
         isCorrect: 1
-      - answerText: Merapikan peralatan sekolah dan pulang
+      - answerText: Terjadinya kenaikan air di permukaan bumi
         isCorrect: 0
-      - answerText: Mendekat kearah jendela
-        isCorrect: 0
-    - questionText: Tiba tiba air pantai surut seketika setelah gempa. Apa yang anda
-        lakukan ?
+    - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
       answers:
-      - answerText: Lari kedalam rumah
+      - answerText: Berdiam diri dan menunggu bantuan
         isCorrect: 0
-      - answerText: mencari tempat yang lebih tinggi
+      - answerText: Berlindung segera ke bawah meja
         isCorrect: 1
-    - questionText: Dirumah terjadi kebakaran kecil. apa yang anda lakukan?
+      - answerText: 'Berlindung di samping jendela '
+        isCorrect: 0
+    - questionText: Jika gempa bumi di ruangan bertingkat dan kita ingin turun kebawah
+        kita menggunakan ?
       answers:
-      - answerText: Mematikan api dengan handuk basah ?
+      - answerText: Tangga darurat untuk keluar bangunan
         isCorrect: 1
-      - answerText: menyiram api dengan air keran
+      - answerText: Lift umum karena lebih cepat
         isCorrect: 0
-  - name: Round One
-    timeLimitInSeconds: 30
+    - questionText: Setelah gempa terdengar peringatan dini Tsunami. Kita harus ?
+      answers:
+      - answerText: Berlari kearea yang lebih tinggi
+        isCorrect: 1
+      - answerText: Mengemas barang terlebih dahulu
+        isCorrect: 0
+    - questionText: Jika gempa telah usai dan kita berada didalam ruangan maka
+      answers:
+      - answerText: Segera evakuasi diri ketempat yang aman
+        isCorrect: 1
+      - answerText: Berlari ke area yang lebih tinggi
+        isCorrect: 0
+  - name: Tsunami
+    timeLimitInSeconds: 60
     plusScore: 10
     questions:
-    - questionText: Ini second round
+    - questionText: Apa itu gempa bumi ?
       answers:
-      - answerText: Berlindung dibawah meja
+      - answerText: Getaran atau gunvangan dipermukaan bumi
         isCorrect: 1
-      - answerText: Merapikan peralatan sekolah dan pulang
+      - answerText: Terjadinya kenaikan air di permukaan bumi
         isCorrect: 0
-    - questionText: Tiba tiba air pantai surut seketika setelah gempa. Apa yang anda
-        lakukan ?
+    - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
       answers:
-      - answerText: Lari kedalam rumah
+      - answerText: Berdiam diri dan menunggu bantuan
         isCorrect: 0
-      - answerText: mencari tempat yang lebih tinggi
+      - answerText: Berlindung segera ke bawah meja
         isCorrect: 1
+      - answerText: 'Berlindung di samping jendela '
+        isCorrect: 0
+    - questionText: Jika gempa bumi di ruangan bertingkat dan kita ingin turun kebawah
+        kita menggunakan ?
+      answers:
+      - answerText: Tangga darurat untuk keluar bangunan
+        isCorrect: 1
+      - answerText: Lift umum karena lebih cepat
+        isCorrect: 0
+    - questionText: Setelah gempa terdengar peringatan dini Tsunami. Kita harus ?
+      answers:
+      - answerText: Berlari kearea yang lebih tinggi
+        isCorrect: 1
+      - answerText: Mengemas barang terlebih dahulu
+        isCorrect: 0
+    - questionText: Jika gempa telah usai dan kita berada didalam ruangan maka
+      answers:
+      - answerText: Segera evakuasi diri ketempat yang aman
+        isCorrect: 1
+      - answerText: Berlari ke area yang lebih tinggi
+        isCorrect: 0
+  - name: Gunung Berapi
+    timeLimitInSeconds: 60
+    plusScore: 10
+    questions:
+    - questionText: Apa itu gempa bumi ?
+      answers:
+      - answerText: Getaran atau gunvangan dipermukaan bumi
+        isCorrect: 1
+      - answerText: Terjadinya kenaikan air di permukaan bumi
+        isCorrect: 0
+    - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
+      answers:
+      - answerText: Berdiam diri dan menunggu bantuan
+        isCorrect: 0
+      - answerText: Berlindung segera ke bawah meja
+        isCorrect: 1
+      - answerText: 'Berlindung di samping jendela '
+        isCorrect: 0
+    - questionText: Jika gempa bumi di ruangan bertingkat dan kita ingin turun kebawah
+        kita menggunakan ?
+      answers:
+      - answerText: Tangga darurat untuk keluar bangunan
+        isCorrect: 1
+      - answerText: Lift umum karena lebih cepat
+        isCorrect: 0
+    - questionText: Setelah gempa terdengar peringatan dini Tsunami. Kita harus ?
+      answers:
+      - answerText: Berlari kearea yang lebih tinggi
+        isCorrect: 1
+      - answerText: Mengemas barang terlebih dahulu
+        isCorrect: 0
+    - questionText: Jika gempa telah usai dan kita berada didalam ruangan maka
+      answers:
+      - answerText: Segera evakuasi diri ketempat yang aman
+        isCorrect: 1
+      - answerText: Berlari ke area yang lebih tinggi
+        isCorrect: 0
 --- !u!1 &470315480
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +510,7 @@ SpriteRenderer:
   m_SortingLayerID: -1073729931
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 76eb80e222d536042ac0e980b28d09f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e20a800183d1bc240bc4e84094e965e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -744,7 +813,7 @@ SpriteRenderer:
   m_SortingLayerID: -1073729931
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 3a017cd2261aa0548874a7323a345eab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5352236ba7b32724696bdcfcb14990b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -940,7 +1009,7 @@ SpriteRenderer:
   m_SortingLayerID: -1073729931
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 3a017cd2261aa0548874a7323a345eab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5352236ba7b32724696bdcfcb14990b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

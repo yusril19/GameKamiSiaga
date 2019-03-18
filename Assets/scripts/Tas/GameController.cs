@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     private Renderer ren;
     public float timeleft;
     public Text timerText;
-    public GameObject waktuHabisTxt;
+    public GameObject endGame;
     public GameObject restartBtn;
     public GameObject MenuButton;
     public GameObject start;
@@ -56,14 +56,11 @@ public class GameController : MonoBehaviour
     }
     //memunculkan item 
     //spawn item dengan tingkat level mudah
-    IEnumerator SpawnEasy()
+    IEnumerator Spawn()
     {
         playGame = true;   
         //item muncul dari atas berulang kali
         while (timeleft > 0 ) {
-
-            yield return new WaitForSeconds(Random.Range(1.0f, 0.9f));
-
             GameObject item = items[Random.Range(0, items.Length)];
             Vector3 spawnPosition = new Vector3(
             Random.Range(-maxWidth, maxWidth),
@@ -74,89 +71,20 @@ public class GameController : MonoBehaviour
         Quaternion spawnRotation = Quaternion.identity;
         //inisiasi
         Instantiate(item, spawnPosition, spawnRotation);
-            
+        yield return new WaitForSeconds(Random.Range(1.0f, 0.9f));
         }
         //waktu habis tampilkan restart dan waktu habis
-        yield return new WaitForSeconds(2.0f);
 
-
-        waktuHabisTxt.SetActive(true);
+        endGame.SetActive(true);
         restartBtn.SetActive(true);
         MenuButton.SetActive(true);
     }
-    IEnumerator SpawnMedium()
-    {
-        playGame = true;
-        //item muncul dari atas berulang kali
-        while (timeleft > 0)
-        {
-
-            yield return new WaitForSeconds(Random.Range(0.9f, 0.7f));
-
-            GameObject item = items[Random.Range(0, items.Length)];
-            Vector3 spawnPosition = new Vector3(
-            Random.Range(-maxWidth, maxWidth),
-            transform.position.y,
-            0.0f
-            );
-            //item tidak berotasi
-            Quaternion spawnRotation = Quaternion.identity;
-            //inisiasi
-            Instantiate(item, spawnPosition, spawnRotation);
-
-        }
-        //waktu habis tampilkan restart dan waktu habis
-        yield return new WaitForSeconds(2.0f);
-
-        waktuHabisTxt.SetActive(true);
-        restartBtn.SetActive(true);
-        MenuButton.SetActive(true);
-    }
-    IEnumerator SpawnHard()
-    {
-        playGame = true;
-        //item muncul dari atas berulang kali
-        while (timeleft > 0)
-        {
-
-            yield return new WaitForSeconds(Random.Range(0.7f, 0.5f));
-
-            GameObject item = items[Random.Range(0, items.Length)];
-            Vector3 spawnPosition = new Vector3(
-            Random.Range(-maxWidth, maxWidth),
-            transform.position.y,
-            0.0f
-            );
-            //item tidak berotasi
-            Quaternion spawnRotation = Quaternion.identity;
-            //inisiasi
-            Instantiate(item, spawnPosition, spawnRotation);
-
-        }
-        //waktu habis tampilkan restart dan waktu habis
-        yield return new WaitForSeconds(2.0f);
-
-        waktuHabisTxt.SetActive(true);
-        restartBtn.SetActive(true);
-        MenuButton.SetActive(true);
-    }
-    public void StartGameEasy()
+    
+    public void StartGame()
     {
         start.SetActive(false);
         bag.turnOnControl(true);
-        StartCoroutine(SpawnEasy());
-    }
-    public void StartGameMedium()
-    {
-        start.SetActive(false);
-        bag.turnOnControl(true);
-        StartCoroutine(SpawnMedium());
-    }
-    public void StartGameHard()
-    {
-        start.SetActive(false);
-        bag.turnOnControl(true);
-        StartCoroutine(SpawnHard());
+        StartCoroutine(Spawn());
     }
     public void BackToMenu()
     {

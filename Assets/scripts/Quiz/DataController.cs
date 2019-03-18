@@ -6,23 +6,21 @@ using UnityEngine.SceneManagement;
 public class DataController : MonoBehaviour
 {
     public RoundData[] allRoundData;
-    private UserProggres userProggres;
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MainMenu");
     }
-    public RoundData getCurrentData()
+    public RoundData getGempa()
     {
-        return allRoundData[Random.Range(0,allRoundData.Length)];
+        return allRoundData[0];
     }
-
-    private void LoadUserProgress()
+    public RoundData getTsunami()
     {
-        userProggres = new UserProggres();
-        if(PlayerPrefs.HasKey("Skor Tertinggi"))
-        {
-
-        }
+        return allRoundData[1];
+    }
+    public RoundData getGunungBerapi()
+    {
+        return allRoundData[2];
     }
 }

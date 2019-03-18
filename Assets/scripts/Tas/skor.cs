@@ -11,7 +11,6 @@ public class skor : MonoBehaviour
     private int score;
     public Text LastScore;
 
-
     void Start()
     {
         score = 0;
@@ -22,12 +21,10 @@ public class skor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Minus")
         {
-
             score -= itemValue * 2;
         }
         else
         {
-
             score += itemValue;
         }
         //audio
