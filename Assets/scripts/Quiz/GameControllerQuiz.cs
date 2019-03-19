@@ -36,6 +36,7 @@ public class GameControllerQuiz : MonoBehaviour
         CurrentRoundData = dataCon.getGempa();
 
         StartDisplay.SetActive(false);
+        QuestionPanelDisplay.SetActive(true);
 
         questionPool = CurrentRoundData.questions;
         time = CurrentRoundData.timeLimitInSeconds; 
@@ -50,9 +51,10 @@ public class GameControllerQuiz : MonoBehaviour
     public void tsunamiChoice()
     {
         dataCon = FindObjectOfType<DataController>();
-        CurrentRoundData = dataCon.getGempa();
+        CurrentRoundData = dataCon.getTsunami();
 
         StartDisplay.SetActive(false);
+        QuestionPanelDisplay.SetActive(true);
 
         questionPool = CurrentRoundData.questions;
         time = CurrentRoundData.timeLimitInSeconds;
@@ -67,9 +69,10 @@ public class GameControllerQuiz : MonoBehaviour
     public void gunungApiChoice()
     {
         dataCon = FindObjectOfType<DataController>();
-        CurrentRoundData = dataCon.getGempa();
+        CurrentRoundData = dataCon.getGunungBerapi();
 
         StartDisplay.SetActive(false);
+        QuestionPanelDisplay.SetActive(true);
 
         questionPool = CurrentRoundData.questions;
         time = CurrentRoundData.timeLimitInSeconds;
@@ -91,8 +94,10 @@ public class GameControllerQuiz : MonoBehaviour
         for(int i = 0; i<questionData.answers.Length; i++)
         {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
+            
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
+            answerButtonGameObject.transform.localScale = Vector3.one;
             
             answerButton AnswerButton = answerButtonGameObject.GetComponent<answerButton>();
             AnswerButton.Setup(questionData.answers[i]);
@@ -113,11 +118,11 @@ public class GameControllerQuiz : MonoBehaviour
             playerScore += CurrentRoundData.plusScore;
             displayScoreText.text = "" + playerScore.ToString();
             lastScore.text = "" + playerScore.ToString();
-            StartCoroutine(ShowStatus("Benar", 0.5f));
+            StartCoroutine(ShowStatus("BENAR", 0.5f));
         }
         else
         {
-            StartCoroutine(ShowStatus("Salah", 0.5f));
+            StartCoroutine(ShowStatus("SALAH", 0.5f));
         }
         if(questionPool.Length > questionIndex + 1)
         {

@@ -18,8 +18,11 @@ public class Informasi : MonoBehaviour
     {
         BackUi.interactable = true;
         MenuUi.interactable = true;
+        MenuUi.alpha = 1;
         InformasiUi.interactable = true;
 
+        Tas.blocksRaycasts = false;
+        quiz.blocksRaycasts = false;
         Tas.interactable = false;
         quiz.interactable = false;
         Tas.alpha = 0;
@@ -29,8 +32,11 @@ public class Informasi : MonoBehaviour
     {
         BackUi.interactable = false;
         MenuUi.interactable = false;
+        MenuUi.alpha = 0;
         InformasiUi.interactable = false;
 
+        Tas.blocksRaycasts = true;
+        quiz.blocksRaycasts = true;
         Tas.interactable = true;
         quiz.interactable = true;
         Tas.alpha = 1;

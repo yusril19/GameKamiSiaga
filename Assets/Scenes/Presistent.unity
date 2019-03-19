@@ -158,11 +158,11 @@ MonoBehaviour:
   allRoundData:
   - name: Gempa Bumi
     timeLimitInSeconds: 60
-    plusScore: 10
+    plusScore: 20
     questions:
     - questionText: Apa itu gempa bumi ?
       answers:
-      - answerText: Getaran atau gunvangan dipermukaan bumi
+      - answerText: Getaran atau guncangan dipermukaan bumi
         isCorrect: 1
       - answerText: Terjadinya kenaikan air di permukaan bumi
         isCorrect: 0
@@ -197,12 +197,12 @@ MonoBehaviour:
     timeLimitInSeconds: 60
     plusScore: 10
     questions:
-    - questionText: Apa itu gempa bumi ?
+    - questionText: Apa itu Tsunami ?
       answers:
-      - answerText: Getaran atau gunvangan dipermukaan bumi
-        isCorrect: 1
-      - answerText: Terjadinya kenaikan air di permukaan bumi
+      - answerText: Luapan Air ketika bulan purnama
         isCorrect: 0
+      - answerText: Naiknya air diakibatkan gempa bumi atau gunung meletus sebelumnya
+        isCorrect: 1
     - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
       answers:
       - answerText: Berdiam diri dan menunggu bantuan

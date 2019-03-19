@@ -21,7 +21,7 @@ public class skor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Minus")
         {
-            score -= itemValue * 2;
+            score -= itemValue;
         }
         else
         {
