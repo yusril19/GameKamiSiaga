@@ -166,6 +166,8 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: Terjadinya kenaikan air di permukaan bumi
         isCorrect: 0
+      - answerText: Hembusan Angin yang kuat
+        isCorrect: 0
     - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
       answers:
       - answerText: Berdiam diri dan menunggu bantuan
@@ -181,92 +183,110 @@ MonoBehaviour:
         isCorrect: 1
       - answerText: Lift umum karena lebih cepat
         isCorrect: 0
-    - questionText: Setelah gempa terdengar peringatan dini Tsunami. Kita harus ?
+    - questionText: Bila dalam bangunan yang memiliki petugas keamanan kita harus
+        ?
       answers:
-      - answerText: Berlari kearea yang lebih tinggi
+      - answerText: Ikuti intruksi evakuasi
         isCorrect: 1
-      - answerText: Mengemas barang terlebih dahulu
+      - answerText: Tetap berdiam diri
         isCorrect: 0
-    - questionText: Jika gempa telah usai dan kita berada didalam ruangan maka
+      - answerText: Panik dan berlarian
+        isCorrect: 0
+    - questionText: Berikut yang harus diperhatikan ketika keluar rumah setelah gempa,
+        kecuali?
       answers:
-      - answerText: Segera evakuasi diri ketempat yang aman
-        isCorrect: 1
-      - answerText: Berlari ke area yang lebih tinggi
+      - answerText: Perhatikan pecahan kaca
         isCorrect: 0
+      - answerText: Lindungi kepala dan berlari ke lapangan terbuka
+        isCorrect: 0
+      - answerText: Berdiri didekat tiang atau pohon
+        isCorrect: 1
   - name: Tsunami
     timeLimitInSeconds: 60
     plusScore: 10
     questions:
-    - questionText: Apa itu Tsunami ?
+    - questionText: Gelombang air laut yang sangat besar dinamakan ?
       answers:
-      - answerText: Luapan Air ketika bulan purnama
+      - answerText: Ombak
         isCorrect: 0
-      - answerText: Naiknya air diakibatkan gempa bumi atau gunung meletus sebelumnya
+      - answerText: Tsunami
         isCorrect: 1
-    - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
-      answers:
-      - answerText: Berdiam diri dan menunggu bantuan
+      - answerText: Angin Laut
         isCorrect: 0
-      - answerText: Berlindung segera ke bawah meja
+    - questionText: Berikut salah satu ciri sebelum terjadi tsunami adalah ?
+      answers:
+      - answerText: Banyak ikan menggelepar dipantai yang airnya surut
         isCorrect: 1
-      - answerText: 'Berlindung di samping jendela '
+      - answerText: Air pantai yang asin berubah menjadi tawar
         isCorrect: 0
-    - questionText: Jika gempa bumi di ruangan bertingkat dan kita ingin turun kebawah
-        kita menggunakan ?
+      - answerText: Angin berhembus kencang dari pantai
+        isCorrect: 0
+    - questionText: Jika terjadi tsunami apa yang harus kita lakukan ?
       answers:
-      - answerText: Tangga darurat untuk keluar bangunan
+      - answerText: Melihat dan menunggu datangnya tsunami
+        isCorrect: 0
+      - answerText: Berlari menjauhi pantai dan menuju tempat tinggi
         isCorrect: 1
-      - answerText: Lift umum karena lebih cepat
+      - answerText: Menangkap ikan yang terdampar di pinggir pantai
         isCorrect: 0
-    - questionText: Setelah gempa terdengar peringatan dini Tsunami. Kita harus ?
+    - questionText: Jika mendengar sirine bahaya tsunami itu artinya ?
       answers:
-      - answerText: Berlari kearea yang lebih tinggi
+      - answerText: Segera evakuasi diri dari pantai
         isCorrect: 1
       - answerText: Mengemas barang terlebih dahulu
         isCorrect: 0
-    - questionText: Jika gempa telah usai dan kita berada didalam ruangan maka
+      - answerText: Tetap tenang dan memastikan terjadinya tsunami
+        isCorrect: 0
+    - questionText: Tsunami telah berakhir, kita harus?
       answers:
-      - answerText: Segera evakuasi diri ketempat yang aman
+      - answerText: Menunggu keadaan aman setelah dinyatakan pihak berwenang
         isCorrect: 1
-      - answerText: Berlari ke area yang lebih tinggi
+      - answerText: Kembali ke pinggir pantai
+        isCorrect: 0
+      - answerText: Secepatnya mencari barang berharga
         isCorrect: 0
   - name: Gunung Berapi
     timeLimitInSeconds: 60
     plusScore: 10
     questions:
-    - questionText: Apa itu gempa bumi ?
+    - questionText: Awan panas adalah
       answers:
-      - answerText: Getaran atau gunvangan dipermukaan bumi
-        isCorrect: 1
-      - answerText: Terjadinya kenaikan air di permukaan bumi
+      - answerText: Aliran mata air yang baru
         isCorrect: 0
-    - questionText: Jika gempa bumi terjadi didalam ruangan kita harus ?
+      - answerText: Aliran material vulkanik panas
+        isCorrect: 1
+      - answerText: Hembusan angin yang kencang
+        isCorrect: 0
+    - questionText: Berikut cara menghindari debu vulkanik, kecuali?
       answers:
-      - answerText: Berdiam diri dan menunggu bantuan
+      - answerText: Masker
         isCorrect: 0
-      - answerText: Berlindung segera ke bawah meja
+      - answerText: Kantong Plastik
         isCorrect: 1
-      - answerText: 'Berlindung di samping jendela '
+      - answerText: Kacamata
         isCorrect: 0
-    - questionText: Jika gempa bumi di ruangan bertingkat dan kita ingin turun kebawah
-        kita menggunakan ?
+    - questionText: Ketika gunung meletus kita harus ?
       answers:
-      - answerText: Tangga darurat untuk keluar bangunan
-        isCorrect: 1
-      - answerText: Lift umum karena lebih cepat
+      - answerText: Berada ditempat yang harus dikosongkan
         isCorrect: 0
-    - questionText: Setelah gempa terdengar peringatan dini Tsunami. Kita harus ?
+      - answerText: Berada dilembah atau aliran sungai
+        isCorrect: 0
+      - answerText: Menghindari tempat yang terbuka
+        isCorrect: 1
+    - questionText: Yang dihindari setelah gunung meletus adalah ?
       answers:
-      - answerText: Berlari kearea yang lebih tinggi
+      - answerText: Abu Vulkanik
         isCorrect: 1
-      - answerText: Mengemas barang terlebih dahulu
+      - answerText: Angin Laut
         isCorrect: 0
-    - questionText: Jika gempa telah usai dan kita berada didalam ruangan maka
+    - questionText: Berikut adalah status bahaya erupsi gunung berapi, kecuali ?
       answers:
-      - answerText: Segera evakuasi diri ketempat yang aman
-        isCorrect: 1
-      - answerText: Berlari ke area yang lebih tinggi
+      - answerText: Awas
         isCorrect: 0
+      - answerText: Normal
+        isCorrect: 0
+      - answerText: Hati-hati
+        isCorrect: 1
 --- !u!1 &470315480
 GameObject:
   m_ObjectHideFlags: 0

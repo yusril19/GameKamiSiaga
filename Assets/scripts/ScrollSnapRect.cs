@@ -9,23 +9,12 @@ using System.Collections.Generic;
 [RequireComponent(typeof(ScrollRect))]
 public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
-    [Tooltip("Set starting page index - starting from 0")]
     public int startingPage = 0;
-    [Tooltip("Threshold time for fast swipe in seconds")]
     public float fastSwipeThresholdTime = 0.3f;
-    [Tooltip("Threshold time for fast swipe in (unscaled) pixels")]
     public int fastSwipeThresholdDistance = 100;
-    [Tooltip("How fast will page lerp to target position")]
     public float decelerationRate = 10f;
-    [Tooltip("Button to go to the previous page (optional)")]
     public GameObject prevButton;
-    [Tooltip("Button to go to the next page (optional)")]
     public GameObject nextButton;
-    [Tooltip("Sprite for unselected page (optional)")]
-    public Sprite unselectedPage;
-    [Tooltip("Sprite for selected page (optional)")]
-    public Sprite selectedPage;
-    [Tooltip("Container with page images (optional)")]
     public Transform pageSelectionIcons;
 
     // fast swipes should be fast and short. If too long, then it is not fast swipe
@@ -180,7 +169,7 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
     //------------------------------------------------------------------------
     private void InitPageSelection() {
         // page selection - only if defined sprites for selection icons
-        _showPageSelection = unselectedPage != null && selectedPage != null;
+
         if (_showPageSelection) {
             // also container with selection images must be defined and must have exatly the same amount of items as pages container
             if (pageSelectionIcons == null || pageSelectionIcons.childCount != _pageCount) {
@@ -211,12 +200,10 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
         
         // unselect old
         if (_previousPageSelectionIndex >= 0) {
-            _pageSelectionImages[_previousPageSelectionIndex].sprite = unselectedPage;
             _pageSelectionImages[_previousPageSelectionIndex].SetNativeSize();
         }
 
         // select new
-        _pageSelectionImages[aPageIndex].sprite = selectedPage;
         _pageSelectionImages[aPageIndex].SetNativeSize();
 
         _previousPageSelectionIndex = aPageIndex;
